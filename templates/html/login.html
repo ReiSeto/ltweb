@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Signin</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="../../static/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="d-flex align-items-center justify-content-center py-4 bg-body-tertiary" style="height: 100vh;">
+    <main class="form-signin w-90">
+        {% if not current_user.is_authenticated %}
+            <!-- Hiển thị chỉ khi người dùng chưa đăng nhập -->
+            <img class="mb-4" src="data:image/png;base64,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" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <form role="form" method="post" action="{{ url_for('login_admin') }}">
+                <div class="form-floating">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">User name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-check text-start my-3">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Remember me
+                    </label>
+                </div>
+                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+            </form>
+            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+        {% endif %}
+    </main>
+</div>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

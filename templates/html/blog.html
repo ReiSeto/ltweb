@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAADICAMAAAD2gAypAAAAZlBMVEX///8AjERgt4rw+PTA49Hg8eggmltAqXOAxqJwv5b8/v2Qza5QsH8Gj0ik1ryNzKsUlVMwomd6w53J59c4pW2Z0bSq2cEXllXX7eLP6dy538xyv5jr9vCHyadKrXrd8OZbtYex3MYUUAbUAAAI8klEQVR4nO1daYOqOgy9irIJUtx1FOX//8k3vjuj5FBali546fnKTOHYNEnTJP3zx8HBwcHBwcHBwcHBwcHBwWG6uG4PWZQEuc/Y7AnG/DxIouywvdr+NH2Iz/so+MuXDxZE+3Ns+zNVI75sglTA+o002Fz+Hfr3rGhH+0W/yO62P1oBTmHeifYv8vBk+9MH4brqx/uH/epjNd8i6SbndaTJwjaJHojXQya8MvXrD1N6XnZUQvyJY+bZptMe3k1kvruD3T6EfLxXN+O/OO4/QexLNWsckZe2icmwLLQQf6JY2iYnQnwbas5ESLPxSv1Jj6y/kY/Vw8t0TvlfpJltkjwsA+3EnwjGt+Ivak15M9jFNlWKODRE/IlwTNrO02fSeCjG49wtdWt2RD6WBb81tczfYFvbpP/HRb9NqyMdg7I72GD+zf1gm/iftRXiT6wny9w2d5vM7XK/WGU+m9nTdVs7Gu6N1JaNO5m35whmZxfr+baJf8O34dPGZv32JhQW9jJftkn/4Ms484Ntyi+Yduvu9lXcL5jZA+l4Z5twBTujy31jmy7BxiDzrW2yAHOeTWw6KiNDbkzkxyXuT5gS+ZNt172O1JBDa+asoRsCI8zH48xUYcKxicewa6nDN6DpVrZJNmClnbkn9GCZHyTzaBOG2eoHWRh+RY8i7+r4sjx4vEcKw000TwLRKEz79rXpcC0NNuuz6O3XRct8UVbcylOT+HrndbTjDxPqoFt9Nfd3Z9Gi1VKLD7JNvr9pkRvtlQ8Oe93TnnE+d1d2UDEnEfld6zijd6unaelNO+Cod7+rWdk3iT3rNJJXi5XoVfL1uPuju5gt+Mpq1zUZuDaO1rh8bZveS7csePMedP8N7yCDuz4f0xJnJcy5GiPvo6QwHH7u9zltMIfvTXqOUw/y9Nx/lHSUec/vkcMDQe0fBF8oEh+YDH32DTcuA9JWYdp7f/OVzoa2TUxCv3eIVtmrmXQ8Dui7AmVAeRdOuvc/mh/ToQTx5Ph7GIHBXpJxUk0SD0b9yPmg8yoq8iN7K96U+bt5xtG8ROJ58rNcfz2Hei0Jf5eEJYcZDZxoMu0PSr124nP9aqwByGseKhHUmrzHe37kM53X0saooXyoIks/B4woFiOthfsyZEdECIcSpFinOK8n8phpcWbBIKXwElBcNYDyrXpHOJT4VAu5U5dOS3UY7NQhECgN08LmoqrncniT+FQrBV+f2h0tu3YIxELoGxQBB7DcKz8VmCRZhk5E/5yeCugIzcYwrVTu0PBxAGqxIqcdf0VYz9TRwsWjAnjORg1WKWWO81GhvqdPpLVidD3Dh2k4f0M1Rk1si7Mon45XUeJUA16lI91Efw+/owrAro3Rp+Dj8gD/UaFOZ7G2tamBbtBi0UMlALXrC5/ykHoEFep07cgzMGHpUFOoPl6BWg7eMKiWk3po8jMOMIbUsKvXc0t4PRikQYevlLq8jAYkDsJUyiskcAXCkhrCHDSmPCutWWE+odyfQwUvVDWDqEcDqStX8Wi9qEsF2+9B1DEAKKUudjOHAz+IUpfbYnPUlVs3PC+i1FEJ2qReqKaOhnu81JUbdjxsGy91eDocGD0YL3VwmB31AcDXj5f6zDb1Yi5BRXn8Y9Sl7mRlm+uo/8BRHw/1rhreHnXrxu0fot7Vm7NHXbk319WHt0dduQ/fdedmj7rynZt4vz4m6sr36+IozZioK4/SYGxORn21qMEQdeWxOYzI9ghQGaKuPCKL89ojLKmLOkRklcfh8fSlRxy+kTrNFRgYjNZwygyGHai3OH1pPqCk8yQ/tBUePGnIEQY5hIOnFqUtQL2yQrsePDWf1M+0nLTuO7yei2blRFODb9KRhD+7hvN1SF4AoWtxyAz/UaFOdbL8kJmmpsChl4asCtBzR/pUrpbRwWzMqpD3+aETSw2rjlwaNJ/0FXIpxcSnxlwaeYiTpiLQ+gQtxa2gfugClWeB4CKsrNBN4xMuQF+W5KGWvDlgR/Oi0exzQOequkJBbcnyckB8qMBpyZaEHFmoKpMudtByp+ZHslJpqBUhb9aTIwupfDBV0kRRkPeqMgPVJKmVRsNNnLmHatJ/Qa0OqHhu3WMF2EGFJAtBvrxQcewgJ54qeE358JAMijVKQiWfY/0eEVMsyRT0q6z1kCXLQ1cVBOifWsH4ufHGDxbWPomIaa1k5c6r1509y2drHzUXDqQKVP9w9gleGT52Pnt/dsr8POHdXAR+SH2yvMMmyf3XSOkxL6I1Zz9Kla+2iieJxJMv8sTVOrAjEDneouohmA6NddzUgkXyf2gEBHj77zTJ5kFfdSP4jGn/ll/3GaCvJ1KSUTTWtMIGrX/Eu+YA9eweRps86qxkxg1l370xp31Xv5YD9CfUWr8OjlbPZqa8hpxpH5GnSdSaW9OAz9arWbnH7eTEui9USB/XfEUGdiipVdzJcW2I6LCOhdExhG61N6apBQ2TjnHvQ3PVQNTl47dYAam7Lw2nMU0atScfl8IgHmt9f9m2tqnX342IW5+xW7VhH2+b631fv+ODV60MOIccPam/B1XTbtp/rC7N/K/bddvbSmfpTtDS6V7eEm4Ay0TnMVEQ5bnJeMyjMAx/Om+F0fxR7PwelTGvRl6/PbyeAwmExkwj3el2GZxyb8kJdxSdch/ZCXcPHpvIm+wZPeVO4RPuDz+mRrrmL3ua7l0QU74BZML3vkz5tp8p3/E05Zu9pnyf25Rv8Zvy3Y1TvrFzyve0Tvl23infyTzlm7infP/6Ny6mFjwbh4KrYmnmZCIYzzKvINNv5VLN6QO9IWj6qwa5rT2qHPFN58Sn2cj0G8VSn5krRrnKqyj1SH0+4AoCY4j3g3pscnHcj1rW3/Buao08u43JfZPAy9TN/LF1btFIEK/VrPl8/SGiTrBorIpoizTRUrtlAtfVkKnPV10vvBoXTmE/9nk4Xs+tPe4tby58IS0y0wfH+hBf2mYMpgGvSujDEZ/3USAy+CyI9i1ubvxYXLeHLEqC3P+5EogxPw+SKDtsP1unOTg4ODg4ODg4ODg4ODg4ODj0w38wTYnpMNcZ7gAAAABJRU5ErkJggg=="
+        type="image/icon type">
+    <title> GO BLOG</title>
+    <script src="{{ url_for('static', filename='js/glob.js') }}"></script>
+
+
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg fixed-top " style="background-color:#E5FFCC ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: forestgreen; font-family: 'Inter Semi Bold'; font-size: 30px;margin-left: 100px; font-weight: bold">
+      <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/400537402_2078720835814004_5106499822936881890_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEnub2Lzrvlo2-l7AIyT_3dkbxw17vL7X-RvHDXu8vtfx8ZyP2wpcV7g-cvNeAb0XDxePZCP3rmaYb7qO60mMRR&_nc_ohc=vGoHIIlV4EsAX8vWFDR&_nc_ht=scontent.fhan14-1.fna&oh=00_AfDyLdj6MaefpAcBN7OsTuvDsXtDns70mr6YeB_aScD8cw&oe=6557C7BA" alt="Logo" width="35" height="30" class="d-inline-block align-text-top">
+      GO
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse align-content-lg-center" id="navbarNavDropdown" style="margin-left: 100px">
+      <ul class="navbar-nav" style="font-size: 20px; font-family: Inter">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/project" >Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link actice" href="#" style="text-decoration: underline; font-weight: bolder">News and blog</a>
+        </li>
+
+      </ul>
+    </div>
+      <form class="d-flex" role="search" style="margin-right: 100px">
+      <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search" style="font-style: italic">
+      <button class="btn " type="submit">
+          <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/402524683_2078720919147329_7297542077389067753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHHCnT9P-IfMwUVFmpvyTmDo9D8Vs7YqgGj0PxWztiqATlGDLZfPr2eAV4pyS-yPClNfRbOOSNulB1d2Sn2mpx4&_nc_ohc=0oks0cTQixMAX9sUZbT&_nc_ht=scontent.fhan14-2.fna&oh=00_AfB_aKKTqqlJR9RkUic2pZzAYRnp6BbSb7mn8_GxYQK2UA&oe=6557A46D" alt="" width="28" height="28"  >
+      </button>
+    </form>
+  </div>
+</nav>
+
+
+     <br><br><br>
+    <div style="margin-top: 70px">
+        <div class="container">
+            <div>
+        <h1 style="font-family: 'Roboto';  color: #4D7E3E; text-align: center; font-weight: bold; font-size: 60px">GO BLOG</h1>
+    </div>
+    <div class="nav-scroller py-1 mb-3 ">
+        <hr>
+    <nav class="nav justify-content-between" style="font-size: large; font-weight: normal ">
+        <a href="#" class="nav-item nav-link link-body-emphasis active" style="margin-left: 450px; font-weight: bold">Energy</a>
+         <a href="#" class="nav-item nav-link link-body-emphasis active">Eco System</a>
+         <a href="#" class="nav-item nav-link link-body-emphasis active"  style="margin-right: 450px">Recycling</a>
+
+    </nav>
+        <hr>
+    </div>
+
+     <br><br><br>
+</div>
+        <main class="container">
+  <div style="display: flex" class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
+      <h1 class="display-4 fst-italic">Success Story: New Tool Connects Multiple Microgrids to Increase Community Resilience</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0">
+          <a href="https://cleantechnica.com/2023/11/12/success-story-new-tool-connects-multiple-microgrids-to-increase-community-resilience/" class="text-body-emphasis fw-bold">Continue reading...</a>
+      </p>
+    </div>
+      <div>
+          <img style="height: 100%;width: 100%; margin-left: 30px" src="https://cleantechnica.com/wp-content/uploads/2023/04/Rooftop-Solar-Power-Clean-Energy-Microgrid-CleanTechnica-Watermark-1024x538.png" alt="">
+      </div>
+  </div>
+
+  <div class="row mb-2">
+      {% for post in blog_posts %}
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-success-emphasis">{{ post.category_name }}</strong>
+        <h3 class="mb-0">{{ post.title }}</h3>
+        <div class="mb-1 text-body-secondary">{{ post.datecre }}</div>
+        <p class="mb-auto">{{ post.content }}</p>
+          <a href="{{ post.link }}"> Continue Reading</a>
+      </div>
+      <div class="col-auto d-none d-lg-block">
+        <img src="{{ post.image }}" alt="{{ post.title }}" width="200px" height="150" style="margin-top: 50px">
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{#    <div class="col-md-6">#}
+{#      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">#}
+{#        <div class="col p-4 d-flex flex-column position-static">#}
+{#          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>#}
+{#          <h3 class="mb-0">Featured post</h3>#}
+{#          <div class="mb-1 text-body-secondary">Nov 12</div>#}
+{#          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>#}
+{##}
+{#        </div>#}
+{#        <div class="col-auto d-none d-lg-block">#}
+{#          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="col-md-6">#}
+{#      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">#}
+{#        <div class="col p-4 d-flex flex-column position-static">#}
+{#          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>#}
+{#          <h3 class="mb-0">Post title</h3>#}
+{#          <div class="mb-1 text-body-secondary">Nov 11</div>#}
+{#          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>#}
+{##}
+{##}
+{#        </div>#}
+{#        <div class="col-auto d-none d-lg-block">#}
+{#          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        From the Firehose
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">The Future Of EVs Can’t Rely On One Man’s Mental Health</h2>
+        <p class="blog-post-meta">January 1, 2023 by <a href="#">Mark</a></p>
+          <img src="https://cleantechnica.com/wp-content/uploads/2023/09/Tesla-Cybertruck-Press-Photo-2000x1000-1-e1699666224602-800x445.png" alt="" style="margin-bottom: 30px">
+        <div style="font-size: 17px">
+            <p>In a number of recent articles like this one at Futurism, Elon Musk has been described as broken. Specifically, one author familiar with the Twitter purchase said, “Elon didn’t just break Twitter, Twitter broke Elon Musk.”</p>
+            <p>To justify that statement, the author points to several incidents that Twitter employees told him about. In one case, Elon Musk is said to have retreated into his office at Twitter HQ and locked himself in. For reasons not fully explained, Twitter employees almost called the police because they reportedly had reasons to believe he’d harm himself.</p>
+            <p>The author claims that as public opinion of Musk fell, Musk’s mental state fell with it, because he cares deeply about his public reputation.</p>
+            <p>To be clear, all of this information comes second and third-hand. Anyone along the way could have said something untrue or be exaggerating the truth. But, it does come from a credible author who is well-respected in the field for this type of behind-the-scenes reporting and writing, so it’s not just an internet rumor.</p>
+            <p>But, whether it’s true or not, it’s something that should give EV advocates pause. Anyone can fall prey to mental health problems, so we’ve got to think long and hard about having one man have so much influence and control over the industry.</p>
+            <h3 style="text-align: center">I Don’t Mean This Disparagingly</h3>
+            <p>Before I delve deeper into this issue, I want to make it pretty clear that I’m not writing this to hurt Elon Musk. It’s well known that I have some deep disagreements with the guy, especially over LGBT rights issues and some of his less-informed statements about firearms regulations. But, at the same time, I’ve also written articles arguing that we should treat eccentric geniuses like Elon Musk better if we want to thrive as a civilization and even invited Elon Musk to have lunch and shoot at Cybertruck metal.</p>
+            <p>Like most other CleanTechnica writers, I used to admire and look up to Musk. He had basically taken a stubborn and unchanging industry and drug it into the EV transition kicking and screaming. He also has been a major force for reforming space travel, another industry/endeavor that had fallen into a bad rut.</p>
+            <p>So, I’m really not trying to hurt his reputation. I’m genuinely concerned for the guy and sort of understand what he’s going through (I personally know exactly what it’s like to fall for depressing far right doomsday propaganda). But, at the same time, we’re dealing with an issue that deeply affects the future of our species, so there’s not room for unlimited slack here.</p>
+        </div>
+
+
+      </article>
+
+
+
+    </div>
+
+    <div class="col-md-4">
+
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#    <nav id="foot">#}
+{#        <div id="foot-note">#}
+{#            <table>#}
+{#                <tr>#}
+{#                    <th></th>#}
+{#                    <th></th>#}
+{#                </tr>#}
+{#                <tr class="foot-note-tr">#}
+{#                    <td>#}
+{#                        <p id="firstline"><b><u>Contact Us</u> to ask a question, provide feedback, or#}
+{#                                report a problem.</b></p>#}
+{#                    </td>#}
+{#                    <td>#}
+{#                        <p id="secline">Last updated on February 17, 2023</p>#}
+{##}
+{#                    </td>#}
+{#                </tr>#}
+{#            </table>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div id="main-footer">#}
+{#                <div class="main-footer-col" style="margin-right:0px;">#}
+{#                    <div id="icon-text">#}
+{#                        <p id="only" style="color:#4D7E3E;font-size: 25px">G-organization</p>#}
+{#                        <img src="https://i.ibb.co/rQdy8CX/337247920-1403401910424148-1184434374642901315-n.jpg" alt="">#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="main-footer-col">#}
+{#                    <div id="icon-container">#}
+{#                        <a href="#" class="fa fa-instagram"></a>#}
+{#                        <a href="#" class="fa fa-facebook"></a>#}
+{#                        <a href="#" class="fa fa-youtube"></a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="main-footer-col">#}
+{#                    <div class="container-text">#}
+{#                        <p id="only" style="color:#4D7E3E;font-size: 25px;">About us</p>#}
+{#                        <p class="main-footer-col-text">Contact us</p>#}
+{#                        <p class="main-footer-col-text">Offices</p>#}
+{#                        <p class="main-footer-col-text">Careers</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="main-footer-col">#}
+{#                    <div class="container-text">#}
+{#                        <p id="only" style="color:#4D7E3E;font-size: 25px;">resources</p>#}
+{#                        <p class="main-footer-col-text">Blogs</p>#}
+{#                        <p class="main-footer-col-text">report and publication</p>#}
+{#                        <p class="main-footer-col-text">For the media</p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#            <div id="div-hr" style="border: 1px #E9EDC9 solid; width: 90%; margin: auto;"></div>#}
+{#            <table id="last-foot">#}
+{#                <tr>#}
+{#                    <th>#}
+{##}
+{#                    </th>#}
+{#                    <th>#}
+{##}
+{#                    </th>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <td id="td-c">#}
+{#                        <div id="icon-container">#}
+{#                            <a href="#" class="fa fa-instagram"></a>#}
+{#                            <a href="#" class="fa fa-facebook"></a>#}
+{#                            <a href="#" class="fa fa-youtube"></a>#}
+{#                        </div>#}
+{#                    </td>#}
+{#                    <td>#}
+{#                        <div style="width:90%;">#}
+{#                            <p style="font-family: 'Open Sans', sans-serif;">#}
+{#                                <a href="https://www.figma.com/file/r3cuzvH7qhJd17AGUzvyoL/Untitled?node-id=107-15&t=6W4JgUHI9wpsVVRq-0"#}
+{#                                    style="font-weight: 100;" font-size=" "><u>Copyright#}
+{#                                        © 2023</u></a> Environmental Defense#}
+{#                                Fund. All Rights Reserved.#}
+{#                                <u>Privacy statement#}
+{#                                </u>- <u> of ethics</u> <br>#}
+{#                                <br><br>#}
+{##}
+{#                                G organization is a nonprofit, tax-exempt charitable organization under Section#}
+{#                                000(c)(3) of#}
+{#                                the#}
+{#                                Internal Revenue Code. Donations are tax-deductible as allowed by law. Tax#}
+{#                                identification#}
+{#                                number#}
+{#                                11611111#}
+{#                                <br>#}
+{#                                <br>#}
+{#                                <br>#}
+{##}
+{#                                GO operates with the highest standards of ethics and open, honest communication. Read#}
+{#                                our#}
+{#                                whistle blower policy or report a concern through our confidential, third-party#}
+{#                                compliance#}
+{#                                site.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </td>#}
+{#                </tr>#}
+{#            </table>#}
+{#        </div>#}
+{##}
+{##}
+{#    </nav>#}
+
+<!---FOOTER---->
+<section style="background-color: #E5FFCC">
+  <div class="b-example-divider" ></div>
+
+
+<div class="container" >
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+          <a href="#" class="nav-link" style="font-size: 23px; font-family: 'Script MT Bold'">Home</a>
+
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <a href="#" class="nav-link" style="font-size: 23px; font-family: 'Script MT Bold'">Project</a>
+
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <a href="#" class="nav-link" style="font-size: 23px; font-family: 'Script MT Bold'">News and blog</a>
+
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form action="/subscribe" method="POST">
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input name='newsletter1'id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+       <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+       <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+</section>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

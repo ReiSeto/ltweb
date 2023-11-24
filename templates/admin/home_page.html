@@ -1,0 +1,38 @@
+{% extends 'admin/master.html' %}
+
+{% block head %}
+    {{ super() }}
+    <!-- Chart JS -->
+    <script src="/static/js/plugin/chart.js/chart.min.js"></script>
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+{% endblock %}
+
+{% block header %}
+    {% if not current_user.is_authenticated %}
+        {# Nếu chưa đăng nhập, hiển thị nội dung từ file login.html #}
+        {% include 'html/login.html' %}
+    {% else %}
+        {# Nếu đã đăng nhập, hiển thị header phù hợp với trạng thái đăng nhập #}
+        {% include 'html/admin.html' %}
+    {% endif %}
+{% endblock %}
+
+
+{% block script %}
+    <!-- Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Script Intro -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-intro").owlCarousel({
+                loop: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                margin: 10,
+                items: 1,
+            });
+        });
+    </script>
+{% endblock script %}

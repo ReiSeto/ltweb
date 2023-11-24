@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Admin</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="/admin/static/bootstrap/bootstrap2/swatch/default/bootstrap.min.css?v=2.3.2" rel="stylesheet">
+        <link href="/admin/static/bootstrap/bootstrap2/css/bootstrap-responsive.css?v=2.3.2" rel="stylesheet">
+        <link href="/admin/static/admin/css/bootstrap2/admin.css?v=1.1.1" rel="stylesheet">
+        <style>
+        body {
+            padding-top: 4px;
+            background-image: url("https://wallpapercave.com/wp/XxlYjym.jpg");
+            font-family: Montserrat;
+        }
+        .navbar123 {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.navbar-inner {
+    border-radius: 10px;
+    background-image: url("https://static.wixstatic.com/media/9d1a4e_b20779916f31489f803942f13d747d51~mv2.png/v1/crop/x_0,y_0,w_1920,h_88/fill/w_2166,h_93,al_c,lg_1,q_85,enc_auto/9d1a4e_b20779916f31489f803942f13d747d51~mv2.png");
+    padding: 10px 0;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 3%);
+    z-index: 5;
+    top: -80px;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    color: #000;
+}
+
+.navbar .nav > li > a {
+    color: #000;
+    font-size: 16px;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav > li.active > a {
+    background-color: #004080;
+}
+
+.navbar .nav > li > p {
+    font-size: 15px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.navbar .nav.pull-right {
+    margin-right: 20px;
+}
+        </style>
+  </head>
+  <body>
+    <div class="container" style="max-width: 1200px; width: 1200px">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <ul class="nav">
+        <li class="active">
+          <a href="/admin/">HOME</a>
+        </li>
+        <li>
+          <a href="/admin/adminmodel/">QUẢN TRỊ VIÊN</a>
+        </li>
+        <li>
+          <a href="/admin/cateblogmodel/">LOẠI BLOG</a>
+        </li>
+        <li>
+          <a href="/admin/blogmodel/">BLOG</a>
+        </li>
+        <li>
+          <a href="/admin/commentmodel/">BÌNH LUẬN</a>
+        </li>
+        <li>
+          <a href="/admin/cateprojectmodel/">LOẠI DỰ ÁN</a>
+        </li>
+        <li>
+          <a href="/admin/projectmodel/">DỰ ÁN</a>
+        </li>
+        <li>
+          <a href="/admin/usercontactmodel/">THÔNG TIN LIÊN HỆ</a>
+        </li>
+        <li>
+            <p style="font-size: 15px; color: black; margin-top: 10px; margin-left: 30px">
+          {{ username }}, <a href="/logout" style="font-weight: bold">LOG OUT</a>
+            </p>
+        </li>
+          </ul>
+          <ul class="nav pull-right">
+          </ul>
+        </div>
+          <div style="text-align: center; margin-top: 15px">
+
+
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 100px">
+        <p style="font-family: 'Noto Sans'; font-size: 60px; color: #000080  ">Chào mừng {{ username }} </p>
+        <p style="font-family: 'Noto Sans'; font-size: 60px ; margin-top: 35px; color: #000080 ">đến với trang chủ quản trị </p>
+    </div>
+
+    <script src="/admin/static/vendor/jquery.min.js?v=3.5.1" type="text/javascript"></script>
+    <script src="/admin/static/bootstrap/bootstrap2/js/bootstrap.min.js?v=2.3.2" type="text/javascript"></script>
+    <script src="/admin/static/vendor/moment.min.js?v=2.22.2" type="text/javascript"></script>
+    <script src="/admin/static/vendor/select2/select2.min.js?v=3.5.2" type="text/javascript"></script>
+  </body>
+</html>
